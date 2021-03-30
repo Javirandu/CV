@@ -1,0 +1,256 @@
+html {
+    box-sizing: border-box;    /* hasta antes del body para hacer las cosas responsive*/
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+   margin: 0;
+   background-color: whitesmoke;
+  }
+.btnTop{
+    background-color: rgba(55,97,131,1);
+    padding: 4px 4px 4px 4px;
+    padding-bottom: 4px;
+    margin-top: 20vh;
+    margin-right: 0;
+    margin-left: 90%;
+    position: fixed;
+    border-radius: 10%;
+}
+.btnTop img{
+    image-resolution: 10px;
+}
+ 
+ 
+header{
+    padding-bottom: 30vh;
+    width: 100%;
+    
+    
+}
+header p{
+    display:block;
+    color:white;
+    text-align:left;
+    margin-top: 0;
+    padding: 15vh;
+    background: rgb(0,13,36);
+  background: linear-gradient(0deg, rgba(0,13,36,1) 0%, rgba(55,97,131,1) 67%, rgba(55,97,131,1) 100%);
+}
+.profileSection{
+    display: flex;
+    flex-direction: row;
+    max-width: 50vw;
+    height: 20vh;
+    justify-content: center;
+    margin:0 auto;
+    top: -50vh;
+    position: relative;  
+    z-index: 2;
+    
+    }
+
+.picContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:0 auto;
+    position: relative;  
+    z-index: 2;
+
+}
+.profilePic{
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    display: flex;
+    margin:0 auto; 
+    height: 40vh;
+    width: 16vw;
+    
+
+}
+table{
+    display: block;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    height: 40vh;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color:black;
+    background-color:white;
+    width: 30vw;
+}
+table th{
+    height: 15vh;
+}
+table td{
+    height: 5vh;
+}
+/*Sidebar and buttons*/
+.sidebar{
+    display: block;
+    list-style: none;
+    overflow: visible;
+    margin-left:0;
+    margin-top: 0;
+    margin-right: 90%;
+    margin-bottom: 8vh;
+    padding: 0;
+    position: fixed;
+    
+}
+
+.sidebar li{
+    border: 2px solid #0099cc;
+    background-color: #002f3f;
+    padding: 8px 20px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    
+    border-top: 0 none;
+    border-radius: 0 0 25px 25px;
+    overflow: visible;
+    margin-bottom: 12vh;
+    transform: rotate(
+        270deg       ) translate(80%,0%);
+            transform-origin: 20% 100%;
+        }
+.sidebar li:hover{
+   background-color: #09c;
+}
+.sidebar span{
+    color:white;
+        }
+.sidebar a{
+    text-decoration: none;
+    color:white;
+}
+.sidebar img{
+    
+    transform: rotate(
+        -270deg       ) translate(0%,0%);
+            transform-origin: 60% 80%;
+        }
+    
+.sidebar img:hover{
+    color: #fff;
+}
+
+
+/*pop up 1*/
+.overlay{
+    visibility: hidden;
+    background: rgba(0,0,0,0.3);
+    position: fixed; /*Para que ocupe toda la página*/
+    top:0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    display: flex;
+    align-content: center;
+    justify-content: center; /*Para alinear de forma horizontal*/
+    z-index: 3;
+
+}
+.overlay a{
+    text-decoration: none;
+}
+.overlay.active{
+    visibility:visible;
+}
+.popup1{
+    z-index: 3;
+    background-color: rgb(114, 184, 250);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8) ;
+    border-radius: 8px;
+    padding:10px;
+    text-align: center;
+    width: 20vw;
+    margin-top: 15vh;
+    margin-bottom: 30vh;
+    align-items: center;
+}
+.popup1 .btn-close-popup{
+    /*Para el botón de cerrar*/
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color:#fff;
+    z-index: 4;
+}
+.popup1 .btn-close-popup:hover{
+       color:black;
+}
+.popup1 .form .btn-submit{
+    padding:0 20px;
+    height: 40px;
+    line-height: 40px;
+    border:none;
+    color:white;
+    background: rgb(114, 184, 250);
+    border-radius: 5%;
+    cursor:pointer;
+    transition: .3s;
+}
+.popup1 .form .btn-submit:hover{
+
+    background:lightseagreen rgba(0,0,0,0.3);
+}
+.contactForm {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color:white;
+    background-color: rgb(114, 184, 250);;
+    width: 19vw;
+    position: absolute;
+   
+}
+.contactForm fieldset{
+    align-content: center;
+    background: rgb(114, 184, 250);
+  border:2px solid white;
+  border-radius: 8px;
+}
+.contactForm legend{
+    background: rgb(114, 184, 250);
+}
+.contactForm h4{
+    background: rgb(114, 184, 250);
+}
+
+
+
+
+
+/*Internal sections*/
+
+.interiorHR{
+    margin-left: 0;
+    border:5px solid linear-gradient(0deg, rgba(0,13,36,1) 0%, rgba(55,97,131,1) 67%, rgba(55,97,131,1) 100%);
+    box-shadow: rgba(0,0,0,0.5);
+    width: 45%;
+}
+
+.main{
+    margin-left: 15vw;
+    margin-right:15vw;
+    font-size: 1vw;
+}
+
+.expSection{
+    background-color: white;
+    padding: 25px;
+    box-shadow: 5px 25px 15px rgb(0, 0, 0,0.2);
+}
+.formSection{
+    margin-top: 5vh;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 5px 25px 15px rgb(0, 0, 0,0.2);
+}
+
